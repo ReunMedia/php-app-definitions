@@ -11,12 +11,7 @@ use Slim\Psr7\Factory\ResponseFactory;
 use Slim\Psr7\Factory\StreamFactory;
 
 /**
- * Default PSR HTTP definitions provided by `generator-reun-webapp`.
- *
- * @author Kimmo Salmela <kimmo.salmela@reun.eu>
- * @copyright 2020 Reun Media
- *
- * @see https://gitlab.com/reun/webdev/generator-reun-webapp
+ * Sets `slim/psr7` as default PSR-7 implementation.
  *
  * @version 1.0.0
  */
