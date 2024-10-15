@@ -2,7 +2,8 @@
     "name": "reun/php-app-definitions",
     "type": "library",
     "require": {
-        "php": "^8.3"
+        "php": "^8.3",
+        "reun/php-app-config": "^0.2.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.44",
