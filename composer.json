@@ -11,11 +11,14 @@
         "pestphp/pest": "^3.4",
         "php-di/php-di": "^7.0",
         "phpstan/phpstan": "^1.12",
-        "slim/psr7": "^1.7"
+        "psr/simple-cache": "^3.0",
+        "slim/psr7": "^1.7",
+        "symfony/cache": "^7.1"
     },
     "autoload": {
         "psr-4": {
-            "Reun\\PhpAppDefinitions\\": "src/"
+            "Reun\\PhpAppDefinitions\\": "src/",
+            "Tests\\": "tests/"
         }
     },
     "config": {
