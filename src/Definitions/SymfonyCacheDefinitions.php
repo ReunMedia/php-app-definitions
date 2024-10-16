@@ -13,6 +13,8 @@ use Symfony\Component\Cache\Psr16Cache;
 /**
  * Sets `symfony/cache` as default PSR-16 implementation.
  *
+ * @see https://github.com/symfony/cache
+ *
  * @version 1.0.0
  */
 final class SymfonyCacheDefinitions implements DefinitionsInterface

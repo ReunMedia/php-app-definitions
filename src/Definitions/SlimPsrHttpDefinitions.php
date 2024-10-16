@@ -13,6 +13,8 @@ use Slim\Psr7\Factory\StreamFactory;
 /**
  * Sets `slim/psr7` as default PSR-7 implementation.
  *
+ * @see https://github.com/slimphp/Slim-Psr7
+ *
  * @version 1.0.0
  */
 final class SlimPsrHttpDefinitions implements DefinitionsInterface
