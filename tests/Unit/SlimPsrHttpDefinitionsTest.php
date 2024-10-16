@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-use DI\Container;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Reun\PhpAppDefinitions\Definitions\SlimPsrHttpDefinitions;
 use Slim\Psr7\Factory\ResponseFactory;
 use Slim\Psr7\Factory\StreamFactory;
+use Tests\TestCase;
 
 test(SlimPsrHttpDefinitions::class, function () {
-    $container = new Container(SlimPsrHttpDefinitions::getDefinitions());
+    $container = TestCase::createContainer(SlimPsrHttpDefinitions::getDefinitions());
 
     foreach ([
         ResponseFactoryInterface::class => ResponseFactory::class,

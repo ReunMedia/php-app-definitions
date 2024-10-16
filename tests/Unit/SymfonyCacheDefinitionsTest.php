@@ -6,6 +6,7 @@ use Psr\SimpleCache\CacheInterface;
 use Reun\PhpAppConfig\Config\AbstractAppConfig;
 use Reun\PhpAppDefinitions\Definitions\SymfonyCacheDefinitions;
 use Symfony\Component\Cache\Psr16Cache;
+use Symfony\Component\Filesystem\Filesystem;
 use Tests\TestAppConfig;
 use Tests\TestCase;
 
@@ -56,7 +57,6 @@ describe(SymfonyCacheDefinitions::class, function () {
 afterAll(function () {
     // Remove cache DB file and directory
     $appConfig = new TestAppConfig();
-    $cacheDir = "{$appConfig->cacheDirectory}";
-    assert(unlink("{$cacheDir}/cacheDb.sqlite"), "Cache DB file couldn't be removed");
-    assert(rmdir($appConfig->cacheDirectory), "Cache directory couldn't be removed");
+    $filesystem = new Filesystem();
+    $filesystem->remove($appConfig->cacheDirectory);
 });

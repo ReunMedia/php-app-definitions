@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use DI\Container;
 use Reun\PhpAppDefinitions\Definitions\HtmlPurifierDefinitions;
+use Tests\TestCase;
 
 test(HtmlPurifierDefinitions::class, function () {
-    $container = new Container(HtmlPurifierDefinitions::getDefinitions());
+    $container = TestCase::createContainer(HtmlPurifierDefinitions::getDefinitions());
 
     foreach ([
         HTMLPurifier_Config::class => HTMLPurifier_Config::class,
