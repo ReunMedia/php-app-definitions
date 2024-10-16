@@ -7,6 +7,7 @@
     },
     "require-dev": {
         "bnf/phpstan-psr-container": "^1.0",
+        "doctrine/orm": "^3.3",
         "ergebnis/composer-normalize": "^2.44",
         "ezyang/htmlpurifier": "^4.17",
         "friendsofphp/php-cs-fixer": "^3.64",
