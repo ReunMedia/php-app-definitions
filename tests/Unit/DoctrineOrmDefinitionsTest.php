@@ -49,7 +49,9 @@ describe(DoctrineOrmDefinitions::class, function () {
         // Test existence of Doctrine logger middleware
         $em = $container->get(EntityManagerInterface::class);
         $mw = $em->getConnection()->getConfiguration()->getMiddlewares();
-        expect(array_map(fn ($x) => $x::class, $mw))->toContain(Middleware::class);
+
+        // @phpstan-ignore method.notFound
+        expect($mw)->toContainInstanceOf(Middleware::class);
     });
 });
 
