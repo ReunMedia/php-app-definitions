@@ -20,10 +20,8 @@ test(MonologDefinitions::class, function () {
         expect($container->get($entry))->toBeInstanceOf($result);
     }
 
-    /** @var AbstractAppConfig */
     $appConfig = $container->get(AbstractAppConfig::class);
 
-    /** @var LoggerInterface */
     $logger = $container->get(LoggerInterface::class);
     $logger->info("Test Message");
 

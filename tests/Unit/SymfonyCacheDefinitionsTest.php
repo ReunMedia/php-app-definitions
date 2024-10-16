@@ -15,11 +15,11 @@ describe(SymfonyCacheDefinitions::class, function () {
         /** @var TestCase $this */
         $container = $this->createContainer(SymfonyCacheDefinitions::getDefinitions());
 
-        /** @var AbstractAppConfig $appConfig */
         $appConfig = $container->get(AbstractAppConfig::class);
 
-        /** @var CacheInterface $cache */
-        $cache = $container->get(CacheInterface::class);
+        // Get CacheInterface from DI container to trigger factory that creates
+        // the cache directory.
+        $container->get(CacheInterface::class);
 
         $cacheDir = "{$appConfig->cacheDirectory}";
         expect($cacheDir)->toBeWritableDirectory();
@@ -41,10 +41,8 @@ describe(SymfonyCacheDefinitions::class, function () {
         /** @var TestCase $this */
         $container = $this->createContainer(SymfonyCacheDefinitions::getDefinitions());
 
-        /** @var AbstractAppConfig $appConfig */
         $appConfig = $container->get(AbstractAppConfig::class);
 
-        /** @var CacheInterface $cache */
         $cache = $container->get(CacheInterface::class);
 
         $cache->set("test", "test");
