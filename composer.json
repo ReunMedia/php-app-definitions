@@ -9,12 +9,14 @@
         "ergebnis/composer-normalize": "^2.44",
         "ezyang/htmlpurifier": "^4.17",
         "friendsofphp/php-cs-fixer": "^3.64",
+        "jms/serializer": "^3.30",
         "pestphp/pest": "^3.4",
         "php-di/php-di": "^7.0",
         "phpstan/phpstan": "^1.12",
         "psr/simple-cache": "^3.0",
         "slim/psr7": "^1.7",
-        "symfony/cache": "^7.1"
+        "symfony/cache": "^7.1",
+        "symfony/filesystem": "^7.1"
     },
     "autoload": {
         "psr-4": {
