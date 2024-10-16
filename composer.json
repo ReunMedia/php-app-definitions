@@ -12,6 +12,8 @@
         "ezyang/htmlpurifier": "^4.17",
         "friendsofphp/php-cs-fixer": "^3.64",
         "jms/serializer": "^3.30",
+        "maximebf/debugbar": "^1.23",
+        "middlewares/debugbar": "^2.1",
         "monolog/monolog": "^3.7",
         "pestphp/pest": "^3.4",
         "php-di/php-di": "^7.0",

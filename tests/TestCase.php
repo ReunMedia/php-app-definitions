@@ -27,4 +27,21 @@ abstract class TestCase extends BaseTestCase
 
         return new Container($definitions);
     }
+
+    /**
+     * Creates stub definitions for DI container.
+     *
+     * @param class-string[] $classes
+     *
+     * @return array<class-string,\Closure>
+     */
+    protected function stubDefinitions(array $classes): array
+    {
+        $definitions = [];
+        foreach ($classes as $class) {
+            $definitions[$class] = fn () => $this->createStub($class);
+        }
+
+        return $definitions;
+    }
 }
