@@ -39,10 +39,8 @@ describe(DoctrineOrmDefinitions::class, function () {
         /** @var TestCase $this */
         $c = array_merge(
             DoctrineOrmDefinitions::getDefinitions(),
-            [
-                // @phpstan-ignore method.protected
-                LoggerInterface::class => fn () => $this->createStub(LoggerInterface::class),
-            ]
+            // @phpstan-ignore method.protected
+            $this->stubDefinitions([LoggerInterface::class])
         );
         $container = TestCase::createContainer($c);
 
