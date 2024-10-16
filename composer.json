@@ -7,6 +7,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.44",
+        "ezyang/htmlpurifier": "^4.17",
         "friendsofphp/php-cs-fixer": "^3.64",
         "pestphp/pest": "^3.4",
         "php-di/php-di": "^7.0",
