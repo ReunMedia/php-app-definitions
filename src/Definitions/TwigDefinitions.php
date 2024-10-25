@@ -25,6 +25,8 @@ use Twig\RuntimeLoader\ContainerRuntimeLoader;
  *
  * @see https://github.com/twigphp/Twig
  *
+ * @uses TwigConfig to configure definitions.
+ *
  * @version 1.0.0
  */
 final class TwigDefinitions implements DefinitionsInterface
