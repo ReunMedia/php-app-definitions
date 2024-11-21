@@ -8,6 +8,7 @@ use Reun\PhpAppConfig\Config\DefinitionsInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Tests\TestAppConfig;
 
+// @phpstan-ignore method.notFound
 test("container can be compiled with all definitions", function () {
     $c = [];
 
