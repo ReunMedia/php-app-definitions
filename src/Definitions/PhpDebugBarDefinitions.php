@@ -40,8 +40,9 @@ final class PhpDebugBarDefinitions implements DefinitionsInterface
             $debugBar = new StandardDebugBar();
 
             // Add conditional collectors
-            static::addPdoCollector($debugBar, $c);
-            static::addMonologCollector($debugBar, $c);
+            // Must use FQN here instead of `static` for container compiling
+            PhpDebugBarDefinitions::addPdoCollector($debugBar, $c);
+            PhpDebugBarDefinitions::addMonologCollector($debugBar, $c);
 
             return $debugBar;
         };
