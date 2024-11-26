@@ -4,9 +4,9 @@
 # @author Reun Media <company@reun.eu>
 # @copyright 2020 Reun Media
 #
-# @see https://github.com/Reun-Media/project-templates/blob/master/base/.gitignore
+# @see https://github.com/Reun-Media/project-templates
 #
-# @version 3.3.0
+# @version 3.3.1
 #
 
 #########################
@@ -67,6 +67,7 @@ Thumbs.db
 #########
 # Tools #
 #########
+# You can remove tools not used in your project.
 
 # PHP
 # https://phpstan.org/config-reference#multiple-files

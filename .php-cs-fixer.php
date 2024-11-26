@@ -6,9 +6,9 @@
  * @author Reun Media <company@reun.eu>
  * @copyright 2020-2024 Reun Media
  *
- * @see https://github.com/Reun-Media/php-app-template/blob/master/app/.php-cs-fixer.php
+ * @see https://github.com/Reun-Media/php-app-template
  *
- * @version 3.0.2
+ * @version 3.0.3
  */
 
 declare(strict_types=1);
@@ -39,4 +39,5 @@ return $config
                 'asterisk',
             ],
         ],
-    ]);
+    ])
+;
