@@ -1,5 +1,7 @@
 {
     "name": "reun/php-app-definitions",
+    "description": "Package definitions and configurations for Reun Media PHP App Template",
+    "license": "MIT",
     "type": "library",
     "require": {
         "php": "^8.3",
