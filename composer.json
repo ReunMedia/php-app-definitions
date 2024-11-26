@@ -49,6 +49,7 @@
     },
     "scripts": {
         "lint": [
+            "composer validate",
             "composer normalize",
             "vendor/bin/php-cs-fixer fix .",
             "vendor/bin/phpstan"
