@@ -5,7 +5,7 @@
     "type": "library",
     "require": {
         "php": "^8.3",
-        "reun/php-app-config": "^0.2.0"
+        "reun/php-app-config": "^0.3.0"
     },
     "require-dev": {
         "bnf/phpstan-psr-container": "^1.0",

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "428b90fc8cc92fbd51f1777e25b71d61",
+    "content-hash": "69ec966b53a23229ff1a2620e2321340",
     "packages": [
         {
             "name": "reun/php-app-config",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:Reun-Media/php-app-config.git",
-                "reference": "25b5fcd14defc36ac765dd99cf496a8047f8845f"
+                "url": "https://github.com/Reun-Media/php-app-config.git",
+                "reference": "e489b74b190aa848d4d3b2c5a517fabcfc0a095a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Reun-Media/php-app-config/zipball/25b5fcd14defc36ac765dd99cf496a8047f8845f",
-                "reference": "25b5fcd14defc36ac765dd99cf496a8047f8845f",
+                "url": "https://api.github.com/repos/Reun-Media/php-app-config/zipball/e489b74b190aa848d4d3b2c5a517fabcfc0a095a",
+                "reference": "e489b74b190aa848d4d3b2c5a517fabcfc0a095a",
                 "shasum": ""
             },
             "require": {
@@ -35,15 +35,9 @@
                     "Reun\\PhpAppConfig\\": "src/"
                 }
             },
-            "scripts": {
-                "lint": [
-                    "composer normalize",
-                    "vendor/bin/php-cs-fixer fix .",
-                    "vendor/bin/phpstan"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "MIT"
             ],
             "authors": [
                 {
@@ -56,11 +50,12 @@
                     "homepage": "https://reun.eu"
                 }
             ],
+            "description": "Reusable base configuration for PHP apps",
             "support": {
-                "source": "https://github.com/Reun-Media/php-app-config/tree/0.2.0",
-                "issues": "https://github.com/Reun-Media/php-app-config/issues"
+                "issues": "https://github.com/Reun-Media/php-app-config/issues",
+                "source": "https://github.com/Reun-Media/php-app-config/tree/0.3.0"
             },
-            "time": "2024-10-15T13:36:00+00:00"
+            "time": "2024-11-21T18:08:13+00:00"
         }
     ],
     "packages-dev": [
