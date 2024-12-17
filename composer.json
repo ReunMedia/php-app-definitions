@@ -3,6 +3,17 @@
     "description": "Package definitions and configurations for Reun Media PHP App Template",
     "license": "MIT",
     "type": "library",
+    "authors": [
+        {
+            "name": "Kimmo Salmela",
+            "email": "kimmo.salmela@reun.eu"
+        },
+        {
+            "name": "Reun Media",
+            "email": "company@reun.eu",
+            "homepage": "https://reun.eu"
+        }
+    ],
     "require": {
         "php": "^8.3",
         "reun/php-app-config": "^0.3.0"
