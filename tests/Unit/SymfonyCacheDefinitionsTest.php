@@ -13,7 +13,7 @@ use Tests\TestCase;
 describe(SymfonyCacheDefinitions::class, function () {
     it("should create writable cache directory and cache DB file if they don't exist", function () {
         /** @var TestCase $this */
-        $container = $this->createContainer(SymfonyCacheDefinitions::getDefinitions());
+        $container = TestCase::createContainer(SymfonyCacheDefinitions::getDefinitions());
 
         $appConfig = $container->get(AbstractAppConfig::class);
 
@@ -27,7 +27,7 @@ describe(SymfonyCacheDefinitions::class, function () {
 
     it("should be constructed successfully", function () {
         /** @var TestCase $this */
-        $container = $this->createContainer(SymfonyCacheDefinitions::getDefinitions());
+        $container = TestCase::createContainer(SymfonyCacheDefinitions::getDefinitions());
 
         foreach ([
             CacheInterface::class => Psr16Cache::class,
@@ -39,7 +39,7 @@ describe(SymfonyCacheDefinitions::class, function () {
 
     it("should write to cache database", function () {
         /** @var TestCase $this */
-        $container = $this->createContainer(SymfonyCacheDefinitions::getDefinitions());
+        $container = TestCase::createContainer(SymfonyCacheDefinitions::getDefinitions());
 
         $appConfig = $container->get(AbstractAppConfig::class);
 

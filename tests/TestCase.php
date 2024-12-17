@@ -39,7 +39,7 @@ abstract class TestCase extends BaseTestCase
     {
         $definitions = [];
         foreach ($classes as $class) {
-            $definitions[$class] = fn () => $this->createStub($class);
+            $definitions[$class] = fn () => static::createStub($class);
         }
 
         return $definitions;

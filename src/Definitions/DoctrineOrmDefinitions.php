@@ -61,7 +61,7 @@ final class DoctrineOrmDefinitions implements DefinitionsInterface
             $em = new EntityManager($connection, $doctrineConfig);
 
             // Add SQLLogger in dev mode
-            if ($appConfig->isDev() && $logger) {
+            if ($appConfig->isDev() && null !== $logger) {
                 $em->getConnection()->getConfiguration()
                     ->setMiddlewares([new Middleware($logger)])
                 ;
