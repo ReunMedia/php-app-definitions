@@ -4,20 +4,17 @@ declare(strict_types=1);
 
 namespace Reun\PhpAppDefinitions\Definitions;
 
-use DebugBar\DebugBar;
 use Middlewares\ContentType;
 use Psr\Container\ContainerInterface;
-use Psr\Http\Server\MiddlewareInterface;
 use Reun\PhpAppConfig\Config\AbstractAppConfig;
 use Reun\PhpAppConfig\Config\DefinitionsInterface;
-use Reun\PhpAppDefinitions\Utils;
+use Reun\PhpAppDefinitions\Config\SlimConfig;
 use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Handlers\ErrorHandler;
 use Slim\Interfaces\ErrorRendererInterface;
 use Slim\Middleware\ContentLengthMiddleware;
 use Slim\Middleware\OutputBufferingMiddleware;
-use Zeuxisoo\Whoops\Slim\WhoopsMiddleware;
 
 /**
  * Definitions for Slim Framework.
@@ -41,36 +38,32 @@ final class SlimDefinitions implements DefinitionsInterface
 
         $c[App::class] = function (
             AbstractAppConfig $config,
-            ContainerInterface $c
+            ContainerInterface $c,
+            SlimConfig $slimConfig,
         ): App {
-            // Prepare middleware
-            $mw = [];
+            $app = AppFactory::createFromContainer($c);
+            $app->addRoutingMiddleware();
+
+            // Add middleware
+
+            // Content type, content length and output buffering middlewares are
+            // hardcoded at certain positions in the middleware stack to ensure
+            // compatibility.
+            $middleware = $slimConfig->getMiddleware();
 
             // Content type middleware must be placed after Debugbar because of
             // its reliance on response Content-Type header.
-            $mw[] = ContentType::class;
+            array_unshift($middleware, ContentType::class);
 
-            // Development only middleware
-            if ($config->isDev()) {
-                $mw[] = DebugBar::class;
-                $mw[] = WhoopsMiddleware::class;
-            }
-
-            $mw[] = OutputBufferingMiddleware::class;
+            $middleware[] = OutputBufferingMiddleware::class;
 
             // Content length middleware should be placed on the end of the
             // middleware stack so that it gets executed first and exited last.
             // This avoids content length mismatch.
-            $mw[] = ContentLengthMiddleware::class;
+            $middleware[] = ContentLengthMiddleware::class;
 
-            $app = AppFactory::createFromContainer($c);
-            $app->addRoutingMiddleware();
-
-            foreach ($mw as $cls) {
-                $mwInstance = Utils::safeContainerGet($c, $cls);
-                if ($mwInstance instanceof MiddlewareInterface) {
-                    $app->add($mwInstance);
-                }
+            foreach ($middleware as $mw) {
+                $app->add($mw);
             }
 
             // Setup ErrorRenderer in production
