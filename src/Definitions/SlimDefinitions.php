@@ -28,7 +28,9 @@ use Slim\Middleware\OutputBufferingMiddleware;
  * @see https://github.com/middlewares/debugbar
  * @see https://github.com/zeuxisoo/php-slim-whoops
  *
- * @version 1.0.0
+ * @uses Reun\PhpAppDefinitions\Config\SlimConfig to configure definitions.
+ *
+ * @version 2.0.0
  */
 final class SlimDefinitions implements DefinitionsInterface
 {

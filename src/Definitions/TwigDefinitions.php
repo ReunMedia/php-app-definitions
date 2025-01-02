@@ -25,7 +25,7 @@ use Twig\RuntimeLoader\ContainerRuntimeLoader;
  *
  * @see https://github.com/twigphp/Twig
  *
- * @uses TwigConfig to configure definitions.
+ * @uses Reun\PhpAppDefinitions\Config\TwigConfig to configure definitions.
  *
  * @version 1.0.0
  */
