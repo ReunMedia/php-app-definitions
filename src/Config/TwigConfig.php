@@ -12,7 +12,7 @@ use Twig\Loader\FilesystemLoader;
  *
  * @version 1.0.0
  */
-final class TwigConfig
+class TwigConfig
 {
     /**
      * Twig FilesystemLoader paths.
