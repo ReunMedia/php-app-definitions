@@ -37,7 +37,7 @@ final class TwigDefinitions implements DefinitionsInterface
 
         // Automatic Markdown extension
         if (interface_exists(MarkdownInterface::class)) {
-            if (class_exists(\Parsedown::class)) {
+            if (class_exists(\Parsedown::class) && class_exists(ErusevMarkdown::class)) {
                 // Parsedown is injected manually instead of relying on
                 // autowiring to allow use of custom Parsedown registered in the
                 // container.
