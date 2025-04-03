@@ -11,12 +11,12 @@
             "version": "0.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Reun-Media/php-app-config.git",
+                "url": "https://github.com/ReunMedia/php-app-config.git",
                 "reference": "e489b74b190aa848d4d3b2c5a517fabcfc0a095a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Reun-Media/php-app-config/zipball/e489b74b190aa848d4d3b2c5a517fabcfc0a095a",
+                "url": "https://api.github.com/repos/ReunMedia/php-app-config/zipball/e489b74b190aa848d4d3b2c5a517fabcfc0a095a",
                 "reference": "e489b74b190aa848d4d3b2c5a517fabcfc0a095a",
                 "shasum": ""
             },
@@ -52,8 +52,8 @@
             ],
             "description": "Reusable base configuration for PHP apps",
             "support": {
-                "issues": "https://github.com/Reun-Media/php-app-config/issues",
-                "source": "https://github.com/Reun-Media/php-app-config/tree/0.3.0"
+                "issues": "https://github.com/ReunMedia/php-app-config/issues",
+                "source": "https://github.com/ReunMedia/php-app-config/tree/0.3.0"
             },
             "time": "2024-11-21T18:08:13+00:00"
         }

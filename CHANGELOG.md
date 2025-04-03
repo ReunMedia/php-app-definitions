@@ -36,8 +36,8 @@ First public release.
 
 Initial release.
 
-[0.2.0]: https://github.com/Reun-Media/php-app-definitions/releases/tag/0.2.0
-[0.1.1]: https://github.com/Reun-Media/php-app-definitions/releases/tag/0.1.1
-[0.1.0]: https://github.com/Reun-Media/php-app-definitions/releases/tag/0.1.0
-[0.0.2]: https://github.com/Reun-Media/php-app-definitions/releases/tag/0.0.2
-[0.0.1]: https://github.com/Reun-Media/php-app-definitions/releases/tag/0.0.1
+[0.2.0]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.2.0
+[0.1.1]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.1.1
+[0.1.0]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.1.0
+[0.0.2]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.0.2
+[0.0.1]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.0.1

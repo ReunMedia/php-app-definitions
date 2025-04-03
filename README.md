@@ -4,5 +4,5 @@
 [![Packagist Version](https://img.shields.io/packagist/v/reun/php-app-definitions)](https://packagist.org/packages/reun/php-app-definitions)
 
 
-Package definitions and configurations for [Reun Media PHP App Template](https://github.com/Reun-Media/php-app-template).
+Package definitions and configurations for [Reun Media PHP App Template](https://github.com/ReunMedia/php-app-template).
 
