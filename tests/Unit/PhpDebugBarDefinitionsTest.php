@@ -56,7 +56,7 @@ describe(PhpDebugBarDefinitions::class, function () {
         $container = TestCase::createContainer($c);
 
         $debugBar = $container->get(DebugBar::class);
-        // @phpstan-ignore method.notFound
+        // @phpstan-ignore-next-line
         expect($debugBar->getCollectors())->toContainInstanceOf(PDOCollector::class);
     });
 
@@ -72,7 +72,7 @@ describe(PhpDebugBarDefinitions::class, function () {
         $container = TestCase::createContainer($c);
 
         $debugBar = $container->get(DebugBar::class);
-        // @phpstan-ignore method.notFound
+        // @phpstan-ignore-next-line
         expect($debugBar->getCollectors())->toContainInstanceOf(MonologCollector::class);
     });
 });
