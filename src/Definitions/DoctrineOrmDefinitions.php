@@ -21,7 +21,7 @@ use Reun\PhpAppDefinitions\Utils;
  *
  * @see https://github.com/doctrine/orm
  *
- * @version 1.0.0
+ * @version 2.0.0
  */
 final class DoctrineOrmDefinitions implements DefinitionsInterface
 {
@@ -57,6 +57,8 @@ final class DoctrineOrmDefinitions implements DefinitionsInterface
                 $appConfig->isDev(),
                 $proxyDir,
             );
+
+            $doctrineConfig->enableNativeLazyObjects(true);
 
             $em = new EntityManager($connection, $doctrineConfig);
 

@@ -42,10 +42,12 @@ describe(PhpDebugBarDefinitions::class, function () {
     it('should add PDOCollector for Doctrine EntityManager if present', function () {
         // "Don't mock what you don't own"
         // Use in-memory database instead.
+        $config = ORMSetup::createAttributeMetadataConfiguration([], true);
+        $config->enableNativeLazyObjects(true);
         $em = new EntityManager(DriverManager::getConnection([
             'driver' => 'pdo_sqlite',
             'memory' => true,
-        ]), ORMSetup::createAttributeMetadataConfiguration([], true));
+        ]), $config);
 
         /** @var TestCase $this */
         $c = array_merge(
