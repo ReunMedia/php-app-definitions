@@ -78,7 +78,7 @@ final class SlimDefinitions implements DefinitionsInterface
                 ;
 
                 if ($errorHandler instanceof ErrorHandler) {
-                    $errorHandler->registerErrorRenderer("text/html", $errorRenderer);
+                    $errorHandler->registerErrorRenderer('text/html', $errorRenderer);
                 }
             }
 

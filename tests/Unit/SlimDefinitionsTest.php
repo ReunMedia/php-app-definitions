@@ -8,7 +8,7 @@ use Slim\App;
 use Tests\TestCase;
 
 describe(SlimDefinitions::class, function () {
-    it("should be constructed successfully", function () {
+    it('should be constructed successfully', function () {
         $container = TestCase::createContainer(array_merge(
             SlimDefinitions::getDefinitions(),
             SlimPsrHttpDefinitions::getDefinitions(),

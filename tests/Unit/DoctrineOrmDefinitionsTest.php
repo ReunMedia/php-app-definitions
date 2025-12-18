@@ -14,7 +14,7 @@ use Tests\TestAppConfig;
 use Tests\TestCase;
 
 describe(DoctrineOrmDefinitions::class, function () {
-    it("should create writable directory for Doctrine DB file", function () {
+    it('should create writable directory for Doctrine DB file', function () {
         $container = TestCase::createContainer(DoctrineOrmDefinitions::getDefinitions());
 
         $appConfig = $container->get(AbstractAppConfig::class);
@@ -23,7 +23,7 @@ describe(DoctrineOrmDefinitions::class, function () {
         expect($doctrineDir)->toBeWritableDirectory();
     });
 
-    it("should be constructed successfully", function () {
+    it('should be constructed successfully', function () {
         $container = TestCase::createContainer(DoctrineOrmDefinitions::getDefinitions());
 
         foreach ([
@@ -35,7 +35,7 @@ describe(DoctrineOrmDefinitions::class, function () {
         }
     });
 
-    it("should add logger in dev mode if one exists", function () {
+    it('should add logger in dev mode if one exists', function () {
         /** @var TestCase $this */
         $c = array_merge(
             DoctrineOrmDefinitions::getDefinitions(),

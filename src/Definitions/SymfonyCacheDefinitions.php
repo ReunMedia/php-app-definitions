@@ -38,7 +38,7 @@ final class SymfonyCacheDefinitions implements DefinitionsInterface
             try {
                 $pdoAdapter->createTable();
             } catch (\PDOException $e) {
-                if (!str_contains($e->getMessage(), "table cache_items already exists")) {
+                if (!str_contains($e->getMessage(), 'table cache_items already exists')) {
                     throw $e;
                 }
             }

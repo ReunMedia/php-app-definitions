@@ -27,10 +27,10 @@ final class MonologDefinitions implements DefinitionsInterface
         $c[Logger::class] = function (AbstractAppConfig $config): Logger {
             $handlers = [
                 new StreamHandler("{$config->dataDirectory}/logs/webapp.log", Level::Info),
-                new StreamHandler("php://stdout"),
+                new StreamHandler('php://stdout'),
             ];
 
-            return new Logger("default", $handlers);
+            return new Logger('default', $handlers);
         };
 
         $c[LoggerInterface::class] = fn (Logger $logger): Logger => $logger;

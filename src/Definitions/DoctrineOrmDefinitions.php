@@ -47,10 +47,10 @@ final class DoctrineOrmDefinitions implements DefinitionsInterface
             }
 
             $connection = DriverManager::getConnection([
-                "driver" => "pdo_sqlite",
-                "path" => "{$doctrineDir}/doctrineDb.sqlite",
+                'driver' => 'pdo_sqlite',
+                'path' => "{$doctrineDir}/doctrineDb.sqlite",
             ]);
-            $proxyDir = "_data-shared/doctrine/proxy";
+            $proxyDir = '_data-shared/doctrine/proxy';
 
             $doctrineConfig = ORMSetup::createAttributeMetadataConfiguration(
                 $paths,

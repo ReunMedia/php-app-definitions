@@ -29,7 +29,7 @@ class TwigConfig
             $basePath => FilesystemLoader::MAIN_NAMESPACE,
             // Add pages path with @pages namespace that will be used by
             // DynamicTwigPage action.
-            "{$basePath}/public/pages" => "pages",
+            "{$basePath}/public/pages" => 'pages',
         ];
     }
 }

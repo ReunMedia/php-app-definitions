@@ -23,7 +23,7 @@ test(MonologDefinitions::class, function () {
     $appConfig = $container->get(AbstractAppConfig::class);
 
     $logger = $container->get(LoggerInterface::class);
-    $logger->info("Test Message");
+    $logger->info('Test Message');
 
     expect("{$appConfig->dataDirectory}/logs/webapp.log")->toBeFile();
 });

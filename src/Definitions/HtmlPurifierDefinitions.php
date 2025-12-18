@@ -22,8 +22,8 @@ final class HtmlPurifierDefinitions implements DefinitionsInterface
         // Allow overriding config separately
         $c[\HTMLPurifier_Config::class] = function (): \HTMLPurifier_Config {
             $config = \HTMLPurifier_Config::createDefault();
-            $config->set("HTML.Nofollow", true);
-            $config->set("HTML.TargetBlank", true);
+            $config->set('HTML.Nofollow', true);
+            $config->set('HTML.TargetBlank', true);
 
             return $config;
         };

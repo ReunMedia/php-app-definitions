@@ -20,7 +20,7 @@ class TestMiddleware implements MiddlewareInterface
         RequestHandlerInterface $handler
     ): ResponseInterface {
         $res = $handler->handle($request);
-        $res->getBody()->write("TestMiddleware");
+        $res->getBody()->write('TestMiddleware');
 
         return $res;
     }
@@ -45,7 +45,7 @@ class CustomSlimConfig2 extends SlimConfig
     }
 }
 
-test("custom Slim configuration class with middleware override", function () {
+test('custom Slim configuration class with middleware override', function () {
     $c = [];
     $c[SlimConfig::class] = fn (CustomSlimConfig $x): SlimConfig => $x;
     $c += SlimDefinitions::getDefinitions();
@@ -53,16 +53,16 @@ test("custom Slim configuration class with middleware override", function () {
     $container = TestCase::createContainer($c);
 
     $slim = $container->get(App::class);
-    $slim->get("/", fn ($req, $res, $args) => $res);
+    $slim->get('/', fn ($req, $res, $args) => $res);
 
     $response = $slim->handle((new ServerRequestFactory())->createServerRequest(
-        "GET",
-        "/"
+        'GET',
+        '/'
     ));
-    expect((string) $response->getBody())->toBe("TestMiddleware");
+    expect((string) $response->getBody())->toBe('TestMiddleware');
 });
 
-test("custom Slim configuration class with middleware appending", function () {
+test('custom Slim configuration class with middleware appending', function () {
     $c = [];
     $c[SlimConfig::class] = fn (CustomSlimConfig2 $x): SlimConfig => $x;
     $c += SlimDefinitions::getDefinitions();
@@ -70,16 +70,16 @@ test("custom Slim configuration class with middleware appending", function () {
     $container = TestCase::createContainer($c);
 
     $slim = $container->get(App::class);
-    $slim->get("/", fn ($req, $res, $args) => $res);
+    $slim->get('/', fn ($req, $res, $args) => $res);
 
     $response = $slim->handle((new ServerRequestFactory())->createServerRequest(
-        "GET",
-        "/"
+        'GET',
+        '/'
     ));
     $body = (string) $response->getBody();
     expect($body)
-        ->not()->toBe("TestMiddleware")
-        ->and($body)->toContain("TestMiddleware")
+        ->not()->toBe('TestMiddleware')
+        ->and($body)->toContain('TestMiddleware')
     ;
 
     // Restore error handlers (probably set by Whoops)

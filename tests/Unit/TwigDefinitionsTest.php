@@ -32,7 +32,7 @@ function getTestDefinitions(): array
 }
 
 describe(TwigDefinitions::class, function () {
-    it("should be constructed successfully", function () {
+    it('should be constructed successfully', function () {
         $container = TestCase::createContainer(getTestDefinitions());
 
         foreach ([
@@ -44,10 +44,10 @@ describe(TwigDefinitions::class, function () {
         }
     });
 
-    it("should render markdown to HTML", function () {
+    it('should render markdown to HTML', function () {
         $container = TestCase::createContainer(getTestDefinitions());
 
         $twig = $container->get(Environment::class);
-        expect($twig->render("test.twig"))->toBe("<h1>Hello World</h1>\n");
+        expect($twig->render('test.twig'))->toBe("<h1>Hello World</h1>\n");
     });
 });

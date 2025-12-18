@@ -76,7 +76,7 @@ final class TwigDefinitions implements DefinitionsInterface
 
             // Twig settings
             $settings = [
-                "debug" => $appConfig->isDev(),
+                'debug' => $appConfig->isDev(),
             ];
             #endregion
 

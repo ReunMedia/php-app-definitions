@@ -25,7 +25,7 @@ describe(SymfonyCacheDefinitions::class, function () {
         expect($cacheDir)->toBeWritableDirectory();
     });
 
-    it("should be constructed successfully", function () {
+    it('should be constructed successfully', function () {
         /** @var TestCase $this */
         $container = TestCase::createContainer(SymfonyCacheDefinitions::getDefinitions());
 
@@ -37,7 +37,7 @@ describe(SymfonyCacheDefinitions::class, function () {
         }
     });
 
-    it("should write to cache database", function () {
+    it('should write to cache database', function () {
         /** @var TestCase $this */
         $container = TestCase::createContainer(SymfonyCacheDefinitions::getDefinitions());
 
@@ -45,7 +45,7 @@ describe(SymfonyCacheDefinitions::class, function () {
 
         $cache = $container->get(CacheInterface::class);
 
-        $cache->set("test", "test");
+        $cache->set('test', 'test');
 
         $cacheDir = "{$appConfig->cacheDirectory}";
         expect("{$cacheDir}/cacheDb.sqlite")->toBeWritableFile();
