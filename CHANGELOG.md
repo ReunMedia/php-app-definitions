@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and [Common Changelog](https://common-changelog.org/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - ????-??-??
+
+### Changed
+
+- **Breaking:** Requires PHP `8.5`
+- **Breaking:** `DoctrineOrmDefinitions` requires Doctrine ORM `3.4+`
+
 ## [0.2.0] - 2025-01-02
 
 ### Changed
@@ -36,6 +43,7 @@ First public release.
 
 Initial release.
 
+[0.3.0]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.3.0
 [0.2.0]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.2.0
 [0.1.1]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.1.1
 [0.1.0]: https://github.com/ReunMedia/php-app-definitions/releases/tag/0.1.0
