@@ -30,7 +30,7 @@
         "middlewares/debugbar": "^2.1",
         "middlewares/negotiation": "^2.1",
         "monolog/monolog": "^3.7",
-        "pestphp/pest": "^3.4",
+        "pestphp/pest": "^4.2",
         "php-debugbar/php-debugbar": "^2.2",
         "php-di/php-di": "^7.0",
         "phpstan/extension-installer": "^1.4",

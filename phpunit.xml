@@ -9,7 +9,7 @@
 
   @see https://github.com/ReunMedia/php-app-template
 
-  @version 3.0.1
+  @version 4.0.0
 -->
 
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -26,11 +26,4 @@
       <directory suffix=".php">src</directory>
     </include>
   </source>
-  <coverage pathCoverage="true">
-    <report>
-      <html outputDirectory="_phpunit/coverage-report-html"
-        lowUpperBound="30"
-        highLowerBound="70" />
-    </report>
-  </coverage>
 </phpunit>
